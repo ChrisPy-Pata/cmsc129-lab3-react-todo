@@ -1,0 +1,482 @@
+/* Google Fonts - Ubuntu*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif ;
+}
+
+
+
+/* App */
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+
+.Sidebar {
+  background-color: rgb(252, 252, 252);
+  min-width: 210px;
+  height: 100%;
+}
+
+/* Main */
+.Main {
+  background-image: url("./images/image-background.jpeg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+}
+
+
+/* Modal */
+.Modal{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5) ;
+}
+
+/* Modal Container */
+
+.Modal .container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+/* AddNewTodo */
+.AddNewTodo {
+  border-bottom: 3px solid #ebebeb;
+}
+
+/* AddNewTodo Button Style */
+.AddNewTodo .btn {
+  padding: 1rem;
+  width: 100%;
+  height: 70px;
+}
+
+.AddNewTodo .btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(36, 120, 189);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: medium;
+}
+
+.AddNewTodo .btn button:hover {
+  transition: opacity 0.2s ease-out;
+  will-change: opacity;
+
+}
+
+/* AddNewTodo Forms */
+
+.TodoForm {
+  padding: 1rem 1rem calc(1rem + 40px) 1rem;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+
+
+}.TodoForm .text input {
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border: none;
+  font-size: 1.2rem;
+
+}
+
+.TodoForm .text input:focus {
+  outline: none;
+  border-bottom: 1px solid #0080ff;
+
+}
+
+.TodoForm p {
+  margin-left: 10px;
+}
+
+.TodoForm .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.TodoForm .pick-day{
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.TodoForm .pick-time {
+  padding: 1.5rem;
+}
+
+.TodoForm .pick-priority {
+
+  padding: 1.5rem;
+}
+
+.TodoForm .pick-priority .priorities {
+  display: flex;
+  padding: 1rem 1rem 0 1rem;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px 5px;
+
+  
+}
+
+.TodoForm .priorities .priority {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px ;
+  border-style: solid;
+  border-color: #bebebe;
+}
+
+.TodoForm .pick-priority .priorities .active {
+  background-color: #0080ff;
+  border: 3px solid #0080ff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5x;
+  cursor: pointer;
+  
+  
+  
+}
+
+.TodoForm .cancel-add {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+}
+
+.TodoForm .confirm-add {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.TodoForm .confirm-add button {
+  width: 100%;
+  height: 40px;
+  background-color: #0080ff;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+}
+
+/* Todo Items */
+
+.ShowTodo {
+  padding: 1rem;
+  border-bottom:  3px solid #ebebeb;
+}
+
+.ShowTodo .header {
+  display: flex;
+  align-items: center;
+
+}
+.ShowTodo .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.ShowTodo .header .title p {
+  margin-left:  5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.ShowTodo .header .btns span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ShowTodo .header .btns span:hover {
+  background-color: #ebebeb;
+  transition: all 300ms ease-in-out;
+}
+
+.ShowTodo .items {
+  padding: 0.5rem;
+}
+
+.ShowTodo .items .item {
+  padding: 0.25rem;
+  margin: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Sort Todo*/
+
+.SortTodo {
+  padding: 1rem;
+  border-bottom: 3px solid #ebebeb;
+}
+
+.SortTodo .header {
+  display: flex;
+  align-items: center;
+}
+
+.SortTodo .header .title {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.SortTodo .header .title p {
+  margin-left:  5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.SortTodo .header .btns {
+  display: flex;
+  align-items: center;
+}
+
+
+.SortTodo .header .btns span {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SortTodo .header .btns span:hover {
+  background-color: #ebebeb;
+  transition: all 300ms ease-in-out;
+}
+
+.SortTodo .items {
+  padding: 0.5rem;
+
+}
+
+/* Sorted */
+
+.Sorted {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  margin: 5px;
+  font-size: 1rem;
+}
+
+.Sorted .name{
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.Sorted .btns {
+  display: flex;
+  align-items: center;
+}
+
+.Sorted .btns .total-todos {
+  position: absolute;
+  right: 0;
+  background: #ebebeb;
+  width: 25px;
+  height: 25px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+}
+
+/* Todos */
+
+/* Todos */
+.Todos {
+  width: 500px;
+  height: 90%;
+  background-color: white;
+
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+
+  border-radius: 4px;
+  opacity: 0.9;
+
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+.Todos .selected-todo {
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+.Todos .todos {
+  overflow-y: auto;
+}
+/* Todo */
+.Todo {
+  padding: 0.5rem 1rem;
+}
+.Todo .todo-container {
+  display: flex;
+  align-items: center;
+}
+.Todo .todo-container span {
+  cursor: pointer;
+}
+.Todo .todo-container .text {
+  position: relative;
+  flex: 1;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.Todo .todo-container .text span {
+  font-size: 0.8rem;
+  color: #bebebe;
+}
+.Todo .todo-container .text .line {
+  height: 1px;
+  background: #bebebe;
+  position: absolute;
+  top: 25%;
+  width: 0;
+  transition: width 250ms ease-in-out;
+}
+.Todo .todo-container .text .line-through {
+  width: 100%;
+}
+
+/* EditTodo */
+.EditTodo {
+  position: absolute;
+  bottom: 40px;
+  left: calc(40px + 450px + 40px);
+
+  background-color: white;
+
+  height: 90%;
+  width: 500px;
+
+  border-radius: 4px;
+  opacity: 0.9;
+}
+.EditTodo .header {
+  margin: 1rem 0.5rem;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  padding-bottom: 2px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+
+/* Todo Component Styles */
+.Todo {
+    margin-bottom: 10px;
+}
+
+.todo-container {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.check-todo {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.text {
+    flex-grow: 1;
+}
+
+.text p {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.text span {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.line {
+    height: 1px;
+    background: #eee;
+    margin-top: 8px;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.delete-todo {
+    margin-left: 15px;
+    color: #ff4444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+}
+
+.delete-todo:hover {
+    color: #cc0000;
+}
+
